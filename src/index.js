@@ -59,6 +59,8 @@ const productTitle = document.querySelector(".bottom-content .text-content:nth-o
 const productText = document.querySelector(".bottom-content .text-content:nth-of-type(2) p")
 const visionTitle = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4")
 const visionText = document.querySelector(".bottom-content .text-content:nth-of-type(3) p")
+const contact = document.querySelector('section.contact');
+const footerLink = document.querySelector('footer a');
 
 //HEADER
 
@@ -106,3 +108,19 @@ productTitle.textContent = siteContent["main-content"]["product-h4"];
 productText.textContent = siteContent["main-content"]["product-content"];
 visionTitle.textContent = siteContent["main-content"]["vision-h4"];
 visionText.textContent = siteContent["main-content"]["vision-content"];
+
+
+//CONTACT
+
+//add text content for contact section
+contact.querySelector('h4').textContent = siteContent['contact']['contact-h4'];
+contact.querySelector('p:nth-of-type(1)').textContent = siteContent['contact']['address'];
+contact.querySelector('p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+contact.querySelector('p:nth-of-type(3)').textContent = siteContent['contact']['email'];
+
+
+//FOOTER
+
+//add text content for contact section and class of bold
+footerLink.textContent = 'Copyright Great Idea! 2021';
+footerLink.classList.add('bold');
