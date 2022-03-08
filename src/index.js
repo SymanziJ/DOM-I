@@ -48,6 +48,17 @@ const logoImg = document.querySelector("#logo-img");
 const ctaTitle = document.querySelector("h1");
 const ctaButton = document.querySelector(".cta button");
 const ctaImg = document.querySelector(".cta img");
+const featuresTitle = document.querySelector(".top-content .text-content h4")
+const featuresText = document.querySelector(".top-content .text-content p")
+const aboutTitle = document.querySelector(".top-content .text-content:nth-of-type(2) h4");
+const aboutText = aboutTitle.nextElementSibling;
+const middleImg = document.querySelector("#middle-img");
+const servicesTitle = document.querySelector(".bottom-content .text-content h4")
+const servicesText = document.querySelector(".bottom-content .text-content p")
+const productTitle = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4")
+const productText = document.querySelector(".bottom-content .text-content:nth-of-type(2) p")
+const visionTitle = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4")
+const visionText = document.querySelector(".bottom-content .text-content:nth-of-type(3) p")
 
 //HEADER
 
@@ -70,3 +81,28 @@ ctaButton.textContent = siteContent.cta.button;
 //add source for cta image
 ctaImg.src = "http://localhost:9000/img/cta.png";
 
+
+//TOP CONTENT
+
+//add text content for features and about
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+featuresText.textContent = siteContent["main-content"]["features-content"];
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+aboutText.textContent = siteContent["main-content"]["about-content"];
+
+
+//MIDDLE CONTENT
+
+//add source of middle img
+middleImg.src = "http://localhost:9000/img/accent.png";
+
+
+//BOTTOM CONTENT
+
+//add text content for services, product, and vision
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+productText.textContent = siteContent["main-content"]["product-content"];
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+visionText.textContent = siteContent["main-content"]["vision-content"];
