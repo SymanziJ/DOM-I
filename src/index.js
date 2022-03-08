@@ -40,3 +40,33 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//VARIABLES
+
+const navLinks = document.querySelectorAll("nav a");
+const logoImg = document.querySelector("#logo-img");
+const ctaTitle = document.querySelector("h1");
+const ctaButton = document.querySelector(".cta button");
+const ctaImg = document.querySelector(".cta img");
+
+//HEADER
+
+//loop through navLinks nodeList variable adding italic class and inserting text from the nav object nested in the siteContent object
+navLinks.forEach((link, index) => {
+  link.classList.add("italic");
+  link.textContent = Object.values(siteContent.nav)[index];
+})
+
+//add source for logo img
+logoImg.src = "http://localhost:9000/img/logo.png";
+
+
+//CTA
+
+//add text content for the cta title and button
+ctaTitle.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+
+//add source for cta image
+ctaImg.src = "http://localhost:9000/img/cta.png";
+
